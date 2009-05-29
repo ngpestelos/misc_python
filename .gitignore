@@ -1,3 +1,4 @@
+*.swp
 *.pyc
 *.vimrc
 out.js
