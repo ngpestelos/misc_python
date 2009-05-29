@@ -1,0 +1,14 @@
+No address 
+Next line is blank 
+someone@somewhere.com 
+Line above matches at start, line below is indented: 
+who@where.com 
+What about multiple matches? 
+first@first.com and second@second.com 
+What about dangling @ signs? 
+@nomatch.com 
+nomatch@ space after '@' 
+Let's try quotes: "a@b.com", <c@d.com> 
+And quotes in the middle: a'b@c.d 
+Longer domains with funny characters: p@q1.r-s.t_u 
+Short domains: x@y
