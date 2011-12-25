@@ -39,20 +39,20 @@ U,S,V = svd(A, full_matrices=False)
 #M = V[5:9,:]
 
 # Create a set of 2D points from the sentences
-Points = V[0:2,:].T
+#Points = V[0:2,:].T
 
 # Create a M x N matrix where each row is the distance from each column
-A = array([[euclidean_distance(Points[i], Points[j]) for j in [5,6,7,8]] for i in [0,1,2,3,4]])
+#A = array([[euclidean_distance(Points[i], Points[j]) for j in [5,6,7,8]] for i in [0,1,2,3,4]])
 
 # Plot Points
-plt.plot(Points[:,0], Points[:,1], 'ro')
-plt.plot(Points[:,0], Points[:,1], 'ro')
-labels = ["c1", "c2", "c3", "c4", "c5", "m1", "m2", "m3", "m4"]
-for label, x, y in zip(labels, Points[:,0], Points[:,1]):
-  plt.annotate(label,
-    xy=(x,y), xytext=(-20,5), textcoords='offset points'
-  )
-plt.show()
+#plt.plot(Points[:,0], Points[:,1], 'ro')
+#plt.plot(Points[:,0], Points[:,1], 'ro')
+#labels = ["c1", "c2", "c3", "c4", "c5", "m1", "m2", "m3", "m4"]
+#for label, x, y in zip(labels, Points[:,0], Points[:,1]):
+#  plt.annotate(label,
+#    xy=(x,y), xytext=(-20,5), textcoords='offset points'
+#  )
+#plt.show()
 
 # C1 vs M1
 #P = array([V[0,0],V[1,0]])
@@ -96,11 +96,12 @@ plt.show()
 
 #################### Debug Here ####################
 
-#U2 = U[:,0:2]
-#S2 = S[0:2]
-#V2 = V[0:2,:]
+U2 = U[:,0:2]
+S2 = S[0:2]
+V2 = V[0:2,:]
 
-#A2 = dot(dot(U2,diag(S2)), V2)
+A2 = dot(dot(U2,diag(S2)), V2)
+print A2
 
 # Plot V
 #plt.plot(V[1,:], V[2,:], 'o')
